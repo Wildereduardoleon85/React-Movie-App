@@ -1,0 +1,140 @@
+.single{
+    background-color: black;
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    left:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: all 0.8s ease-in-out;
+}
+
+.single .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.single .container .image{
+    width:30%;
+}
+
+.single .container .image img{
+    width:100%;
+    vertical-align: bottom;
+}
+
+.single .container .content{
+    padding: 20px;
+    width:70%;
+}
+
+.single .container .content .links{
+    margin-top: 50px;
+}
+
+.single .container .content .links a{
+    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 20px;
+    color: rgb(124, 167, 218)
+}
+
+.single .container .content .subtitle{
+    margin-top: 15px;
+}
+
+.single .container .content .overview{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.single .container .content h1{
+    font-size: 36px;
+}
+
+.single .container .content p span{
+    margin-right: 10px;
+    color: lightgrey;
+}
+
+.single .container .content p{
+    line-height: 2;
+    text-align: justify;
+}
+
+.single .container .content p i{
+    color: rgb(212, 175, 55);
+}
+
+.single .container .content .prod div small{
+    margin-right: 10px;
+    color: lightgrey;
+}
+
+.single .container .content .prod div small:after,
+.single .container .content p span:after{
+    content: '|';
+}
+
+.single .container .content .prod div small:last-child:after,
+.single .container .content p span:last-child:after{
+    content: '';
+}
+
+.single .container .content button{
+    background-color: rgb(207, 0, 0);
+    color: white;
+    border: none;
+    outline:none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+.single .container .content button:hover{
+    background-color: rgb(139, 0, 0);
+    transition: all 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 992px){
+    .single .container{
+        flex-direction: column;
+    }
+
+    .single .container .image{
+        width:50%;
+        margin: 20px auto 0 auto;
+    }
+
+    .single .container .content{
+        width:100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .single .container .image{
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 380px){
+    html{
+        font-size: 12px;
+    }
+
+    .single .container .content h1{
+        font-size: 30px;
+    }
+}
+
+
+
+

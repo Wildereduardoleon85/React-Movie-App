@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bitter', serif;
+    color: white;
+    background: url('./assets/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: black;
+}
+
+/*---------header-----------*/
+
+header{
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*-------------main------------*/
+
+main{
+    padding: 30px 0;
+}
+
+main form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main form input{
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Bitter', serif;
+    font-size: 18px;
+    transition: all 0.3s ease-out;
+}
+
+main form input:focus{
+    box-shadow: 0px 0px 8px 3px red;
+}
+
+main form button{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+    outline:none;
+}
+
+main form button i:hover{
+    cursor: pointer;
+    color: red;
+    transition: all 0.5s ease-in-out;
+}
+
+/*-----------Sort--------------*/
+
+.sort nav{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sort nav a {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.sort nav a:hover{
+    color: red;
+    transition: all 0.5s ease-in-out;
+}
+
+/*-----------Media Queries----------------*/
+
+@media screen and (max-width: 428px){
+
+    .sort nav a {
+        margin: 0 10px;
+    }
+
+    main form input{
+        width: 200px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 350px){
+
+    html{
+        font-size: 12px;
+    }
+
+    .sort nav a {
+        margin: 0 5px;
+    }
+}
+
+
+
