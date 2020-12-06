@@ -15,7 +15,6 @@ export const Search = ({handleInput, handleSubmit}) => {
             <button type="submit">
                 <i className="fas fa-search"></i>
             </button>
-            
         </form>
         
     )

@@ -1,11 +1,8 @@
 .single{
     background-color: black;
-    height:100vh;
     width:100vw;
-    position:fixed;
     top:0;
     left:0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     transition: all 0.8s ease-in-out;
@@ -110,7 +107,7 @@
 
     .single .container .image{
         width:50%;
-        margin: 20px auto 0 auto;
+        margin: 0 auto;
     }
 
     .single .container .content{

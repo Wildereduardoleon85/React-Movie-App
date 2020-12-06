@@ -21,7 +21,7 @@ export const MovieApp = () => {
             return {...prevState, search: e.target.value}
         });
 
-    }
+    };
 
     useEffect(() => {
         getNowPlaying();
@@ -65,7 +65,6 @@ export const MovieApp = () => {
         })
     }
 
-    
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -97,20 +96,28 @@ export const MovieApp = () => {
         // console.log(state.selected);
     }
 
-  
-    document.body.style.overflow = Object.keys(state.selected).length !== 0 ? 'hidden' : null;
+    document.body.style.background = Object.keys(state.selected).length > 0 ? 'black' : "url('./img/background.jpg')";
+    document.body.style.backgroundSize = Object.keys(state.selected).length > 0 ? null : "cover";
+    document.body.style.backgroundRepeat = Object.keys(state.selected).length > 0 ? null : "no-repeat";
+    document.body.style.backgroundColor = Object.keys(state.selected).length > 0 ? null : "black";
     
-
     return (
         <>
             <header>
-                <Header/>
+                {Object.keys(state.selected).length > 0 ? null : <Header/>}
             </header>
             <main>
-                <Search handleInput={handleInput} handleSubmit={handleSubmit}/>
-                <Sort getPopular={getPopular} getNowPlaying={getNowPlaying} getTopRated={getTopRated} getUpcoming={getUpcoming}/>
+                {Object.keys(state.selected).length > 0 ? null : 
+                <Search handleInput={handleInput} handleSubmit={handleSubmit}/> }
+                
+                {Object.keys(state.selected).length > 0 ? null : 
+                <Sort getPopular={getPopular} getNowPlaying={getNowPlaying} getTopRated={getTopRated} getUpcoming={getUpcoming}/>}
+                
                 {Object.keys(state.results).length === 0 ? <h1 style={{textAlign:'center'}}>Loading...</h1> : null}
-                <Results results={state.results} getSingle={getSingle}/>
+                
+                {Object.keys(state.selected).length > 0 ? null : 
+                <Results results={state.results} getSingle={getSingle}/>}
+                
                 {Object.keys(state.selected).length !== 0 ? <Single selected={state.selected} closeSingle={closeSingle}/> : false}
             </main>
         </>

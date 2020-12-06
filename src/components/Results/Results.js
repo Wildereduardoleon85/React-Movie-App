@@ -7,7 +7,7 @@ export const Results = ({results, getSingle}) => {
         <section className="results">
             {results.map((result)=>{
                 return  <div key={result.id} 
-                            className='card' 
+                            className='card'
                             style={result.poster_path === null ? {display: 'none'} : null}
                             onClick={getSingle}
                             >

@@ -9,9 +9,6 @@
 body{
     font-family: 'Bitter', serif;
     color: white;
-    background: url('./assets/img/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     background-color: black;
 }
@@ -33,6 +30,10 @@ main form{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hide{
+    display:none;
 }
 
 main form input{
